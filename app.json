@@ -3,12 +3,19 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/profile/profile"
+    "pages/trip/trip"
+    "pages/main/main"
   ],
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "Webike",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "webike",
     "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "Please, share your location to use our service"
+    }
+  }
 }

@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  width: 100vw;
+  padding-top: 0rpx;
+}
+
+.button-profile {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  opacity: 0.7;
+}
+
+#startTripButton {
+  background-color: rgba(20, 20, 20, 0.822);
+  color: white;
+  height: 100rpx;
+  width: 50%;
+  border: 1px solid rgba(180, 180, 180, 0.88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+  position: fixed;
+  bottom: 30rpx;
+  font-weight: regular;
+  font-size: 40rpx;
+}
