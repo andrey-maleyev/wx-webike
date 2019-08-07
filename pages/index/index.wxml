@@ -1,4 +1,7 @@
-<!--index.wxml-->
+<view class="div-index">
+  <image style="width: 500rpx; height: 500rpx" bindtap="goToMain" src="../images/logo_256px.png"></image>
+</view>
+<!--index.wxml
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -27,3 +30,4 @@
               <view class="weui-tabbar__label">标题</view>
           </view>
       </view>
+-->
