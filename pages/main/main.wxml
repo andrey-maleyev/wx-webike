@@ -1,0 +1,7 @@
+<view class="container">
+  <map longitude="{{lg}}" latitude="{{lt}}" scale="{{sc}}" style="width: 100%; height: 100vh;" markers="{{mk}}"></map>
+
+  <view id="startTripButton" bindtap="goToTrip">
+    Unlock
+  </view>
+</view>
