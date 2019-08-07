@@ -64,8 +64,12 @@ Page({
 
   },
   goToMain: function () {
-    wx.navigateTo({
-      url: '/pages/main/main',
-    })
+    setTimeout(function () {
+        wx.navigateTo({
+          url: '/pages/main/main',
+        }) 
+      },
+      500
+    );
   }
 })
