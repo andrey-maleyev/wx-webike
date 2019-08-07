@@ -1,0 +1,24 @@
+<!--pages/trip/trip.wxml-->
+<!-- <text>pages/trip/trip.wxml</text> -->
+
+<container class="container">
+
+  <view class="happy"><text>HAPPY WEBIKING</text>
+ 
+  </view>
+
+    <view class="time">
+      <text>Time: 45 mins </text>
+    </view>
+
+    <view class="distance">
+      <text>Distance: 2.1 km </text>
+    </view>
+
+    <view class="cost">
+      <text>Cost: RMB 1.00 </text>
+    </view>
+  
+</container>
+<!-- <a class="btn btn-gradient" href="#">Finish Trip</a> -->
+<div class="button_slide"> 🚴 FINISH TRIP 🚴 </div>

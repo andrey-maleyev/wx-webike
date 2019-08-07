@@ -44,8 +44,10 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/main/main",
-					"pathName": "pages/main/main",
+
+					"name": "pages/trip/trip",
+					"pathName": "pages/trip/trip",
+
 					"scene": null
 				}
 			]
