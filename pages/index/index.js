@@ -50,5 +50,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  goToMain: function () {
+    wx.navigateTo({
+      url: '/pages/main/main',
+    })
   }
 })
