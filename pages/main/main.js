@@ -12,24 +12,32 @@ Page({
           id: 0,
           latitude: 30.656,
           longitude: 104.083,
-          width: 40,
-          height: 49
+          width: 35,
+          height: 44
         },
         {
           iconPath: "../images/bike_40px.png",
           id: 0,
           latitude: 30.658,
           longitude: 104.082,
-          width: 40,
-          height: 49
+          width: 35,
+          height: 44
         },
         {
           iconPath: "../images/bike_40px.png",
           id: 0,
           latitude: 30.650,
           longitude: 104.081,
-          width: 40,
-          height: 49
+          width: 35,
+          height: 44
+        },
+        {
+          iconPath: "../images/bike_40px.png",
+          id: 0,
+          latitude: 30.664,
+          longitude: 104.088,
+          width: 35,
+          height: 44
         }
       ]
   },
@@ -125,5 +133,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goToTrip: function() {
+    wx.navigateTo({
+      url: '/pages/trip/trip',
+    })
+  },
+  goToProfile: function () {
+    wx.navigateTo({
+      url: '/pages/profile/profile',
+    })
   }
 })
