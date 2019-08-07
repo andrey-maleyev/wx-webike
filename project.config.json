@@ -43,13 +43,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/profile/profile",
-					"pathName": "pages/profile/profile",
-					"name": "pages/trip/trip",
-					"pathName": "pages/trip/trip",
-          "name": "pages/main/main",
-					"pathName": "pages/trip/trip",
+					"id": 0,
+					"name": "pages/main/main",
+					"pathName": "pages/main/main",
+					"query": "",
 					"scene": null
 				}
 			]

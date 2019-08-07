@@ -21,4 +21,4 @@
   
 </container>
 <!-- <a class="btn btn-gradient" href="#">Finish Trip</a> -->
-<div class="button_slide"> 🚴 FINISH TRIP 🚴 </div>
+<div bindtap="goToMain" class="button_slide"> 🚴 FINISH TRIP 🚴 </div>

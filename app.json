@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/profile/profile"
-    "pages/trip/trip"
+    "pages/profile/profile",
+    "pages/trip/trip",
     "pages/main/main"
   ],
   "window": {
