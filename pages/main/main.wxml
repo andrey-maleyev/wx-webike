@@ -4,4 +4,6 @@
   <view id="startTripButton" bindtap="goToTrip">
     Unlock
   </view>
+
+  <image bindtap="goToProfile" class="button-profile" style="width: 100rpx; height: 100rpx" src="../images/profile_80px.png"></image>
 </view>

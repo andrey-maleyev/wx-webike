@@ -1,6 +1,14 @@
 .container {
+  position: relative;
   width: 100vw;
   padding-top: 0rpx;
+}
+
+.button-profile {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  opacity: 0.7;
 }
 
 #startTripButton {
