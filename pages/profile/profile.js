@@ -22,12 +22,13 @@ Page({
      url: `http://webikechengdu.herokuapp.com/api/v1/users/1`,
      method: 'GET',
      success: res => {
-      //  console.log(res)
        const money = res.data.money
        const userInfo = app.globalData.userInfo
        const nickName = userInfo.nickName
+       const avatarUrl = userInfo.avatarUrl
        let page = this
-       page.setData({nickName}) 
+       page.setData({nickName})
+       page.setData({avatarUrl})
        page.setData({money})
      }
    })

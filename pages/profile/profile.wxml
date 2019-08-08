@@ -1,13 +1,13 @@
 <!--pages/profile/profile.wxml-->
 <view class ="content">
   <view class ="name_photo">
-    <image id = "avatar" src="https://avatars0.githubusercontent.com/u/51037503?s=460&v=4"></image>
+    <image id = "avatar" src="{{avatarUrl}}"></image>
     <view class = "info_2">
       <view class= "box">
-        <text class = "name_1">Name:{{nickName}}</text>
+        <text class = "name_1">Name: {{nickName}}</text>
       </view>
       <view>
-        <text class = "money_1">Money: {{money/100}}RMB</text>
+        <text class = "money_1">Balance: {{money/100}}RMB</text>
       </view>
     </view>
   </view>
@@ -17,7 +17,7 @@
 
     <view>
       <text class = "save">You have saved: 0.5</text> 
-      <image class= "polar_bear"    src="/images/polar-bear.png"></image>
+      <image class= "polar_bear" src="/images/polar-bear.png"></image>
     <!-- <button class ="weui-btn_plain">shsfdsfsd</button> -->
       </view>
 
