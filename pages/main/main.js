@@ -1,51 +1,18 @@
-// pages/main/main.js
+import apiClient from "../../utils/apiClient.js"
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-      sc: '16',
-      mk: [
-        {
-          iconPath: "../images/bike_40px.png",
-          id: 0,
-          latitude: 30.656,
-          longitude: 104.083,
-          width: 35,
-          height: 44
-        },
-        {
-          iconPath: "../images/bike_40px.png",
-          id: 0,
-          latitude: 30.658,
-          longitude: 104.082,
-          width: 35,
-          height: 44
-        },
-        {
-          iconPath: "../images/bike_40px.png",
-          id: 0,
-          latitude: 30.650,
-          longitude: 104.081,
-          width: 35,
-          height: 44
-        },
-        {
-          iconPath: "../images/bike_40px.png",
-          id: 0,
-          latitude: 30.664,
-          longitude: 104.088,
-          width: 35,
-          height: 44
-        }
-      ]
+      sc: '14'
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad: function () {
     const page = this
 
     wx.getLocation({
@@ -57,33 +24,24 @@ Page({
       }
     })
 
+    const options = {
+      success: function (res) {
+        const bikes = res.data.bikes
+        bikes.forEach(function(bike) {
+          bike.iconPath = "../images/bike_40px.png"
+          bike.width = 28
+          bike.height = 35
+        })
+        page.setData({
+          bikes
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
 
-    // wx.authorize({
-    //   scope: 'scope.userLocation',
-    //   success(res) {
-    //     console.log(res)
-    //     wx.getLocation({
-    //       type: 'gcj-02',
-    //       success: function (res) {
-    //         const latitude = res.latitude
-    //         const longitude = res.longitude
-
-    //         // page.setData({ latitude, longitude })
-    //         console.log(latitude)
-    //         console.log(longitude)
-
-    //         wx.openLocation({
-    //           latitude,
-    //           longitude
-    //         })
-    //       }
-    //     })
-    //   },
-    //   fail(err) {
-    //     console.log(err)
-    //   }
-    // })
-    
+    apiClient.getBikes(options)
   },
 
   /**
