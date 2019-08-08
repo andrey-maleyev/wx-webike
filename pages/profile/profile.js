@@ -12,16 +12,40 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(getApp().globalData)
-
-
+    const app = getApp()
+    // while(!userInfo) {
+     
+    // let page = this 
+    // page.setData (nickName)
+   const page = this 
+   wx.request({
+     url: `http://webikechengdu.herokuapp.com/api/v1/users/1`,
+     method: 'GET',
+     success: res => {
+      //  console.log(res)
+       const money = res.data.money
+       const userInfo = app.globalData.userInfo
+       const nickName = userInfo.nickName
+       let page = this
+       page.setData({nickName}) 
+       page.setData({money})
+     }
+   })
   },
+
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    // let userInfo = getApp().globalData.userInfo
+    // console.log(getApp().globalData)
+    // const nickName = userInfo.nickName
+    // console.log(nickName)
+    // let page = this 
+    // page.setData({nickName})
   },
 
   /**

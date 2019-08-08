@@ -4,10 +4,10 @@
     <image id = "avatar" src="https://avatars0.githubusercontent.com/u/51037503?s=460&v=4"></image>
     <view class = "info_2">
       <view class= "box">
-        <text class = "name_1">Name: XYMaggie</text>
+        <text class = "name_1">Name:{{nickName}}</text>
       </view>
       <view>
-        <text class = "money_1">Money: 100.00 RMB</text>
+        <text class = "money_1">Money: {{money/100}}RMB</text>
       </view>
     </view>
   </view>
