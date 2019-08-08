@@ -1,14 +1,18 @@
 .container {
-  position: relative;
   width: 100vw;
   padding-top: 0rpx;
 }
 
 .button-profile {
-  position: absolute;
-  top: 20rpx;
+  position: fixed;
+  z-index: 100000;
+  bottom: 20rpx;
   left: 20rpx;
   opacity: 0.7;
+}
+
+#main-map {
+  z-index: -100000;
 }
 
 #startTripButton {
@@ -22,7 +26,8 @@
   align-items: center;
   border-radius: 30rpx;
   position: fixed;
-  bottom: 30rpx;
+  bottom: 20rpx;
+  right: 20rpx;
   font-weight: regular;
   font-size: 40rpx;
 }

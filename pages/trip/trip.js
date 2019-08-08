@@ -12,7 +12,12 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    const memory = getApp().globalData
 
+    page.setData({
+      qrResult: memory.bikeId
+    })
   },
 
   /**

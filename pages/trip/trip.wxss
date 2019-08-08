@@ -45,7 +45,7 @@
 }
 
 .btn-gradient {
-  color: :black(245, 150, 150);
+  color: black(245, 150, 150);
   padding: 8px 15px;
   border-radius: 10% / 50%;
   font-weight: light;
