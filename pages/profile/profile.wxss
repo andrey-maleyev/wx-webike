@@ -1,13 +1,13 @@
 /* pages/profile/profile.wxss */
 #avatar {
-  border-radius:50%;
-  height:120px;
-  width:120px;
-  margin-top:20px;
-  margin-left:10px;
-  border:2px solid rgb(200,200,200);
- 
+  border-radius: 50%;
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+  border: 2px solid rgb(200,200,200);
 }
+
 .name_photo {
   display:flex;
   background-color:white;
