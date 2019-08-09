@@ -1,0 +1,4 @@
+<!--pages/logo/logo.wxml-->
+<view class="div-index">
+  <image style="width: 500rpx; height: 500rpx" bindtap="goToMain" src="../images/logo_256px.png"></image>
+</view>

@@ -1,0 +1,9 @@
+/* pages/logo/logo.wxss */
+.div-index {
+  background-color: #1e1f20;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
