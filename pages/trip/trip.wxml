@@ -1,11 +1,8 @@
 <!--pages/trip/trip.wxml-->
 <!-- <text>pages/trip/trip.wxml</text> -->
-<view>{{qrResult}}</view>
 <container class="container">
 
-  <view class="happy"><text>HAPPY WEBIKING</text>
- 
-  </view>
+  <view class="happy"><text>HAPPY WEBIKING</text></view>
 
     <view class="time">
 
