@@ -19,7 +19,7 @@ Page({
     // page.setData (nickName)
    const page = this 
    wx.request({
-     url: `http://webikechengdu.herokuapp.com/api/v1/users/1`,
+     url: `http://webikechengdu.herokuapp.com/api/v1/users/6`,
      method: 'GET',
      success: res => {
        const money = res.data.money
