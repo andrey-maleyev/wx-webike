@@ -21,6 +21,7 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+      this.goToLogo()
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
@@ -29,6 +30,7 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        this.goToLogo()
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -39,6 +41,7 @@ Page({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
+          this.goToLogo()
         }
       })
     }
@@ -51,9 +54,17 @@ Page({
       hasUserInfo: true
     })
   },
-  goToMain: function () {
+  goToLogo: function () {
+    setTimeout(function () {
+      wx.navigateTo({
+        url: '/pages/logo/logo',
+      })
+      console.log("----Countdown----");
+    }, 3000)
+  },
+  goToLogoNoWait: function () {
     wx.navigateTo({
-      url: '/pages/main/main',
+      url: '/pages/logo/logo',
     })
   }
 })
