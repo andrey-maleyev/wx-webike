@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/profile/profile",
     "pages/trip/trip",
-    "pages/main/main"
+    "pages/main/main",
+    "pages/scanner/scanner"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,7 +16,7 @@
   "sitemapLocation": "sitemap.json",
   "permission": {
     "scope.userLocation": {
-      "desc": "Please, share your location to use our service"
+      "desc": "Please, share your location"
     }
   }
 }

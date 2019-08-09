@@ -1,47 +1,38 @@
-import apiClient from "../../utils/apiClient.js"
-
+// pages/scanner/scanner.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-      sc: '14'
+
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function () {
+  onLoad: function (options) {
     const page = this
+    const memory = getApp().globalData
 
-    wx.getLocation({
-      type: 'wgs84', // **1
-      success: function (res) {
-        const lt = res.latitude
-        const lg = res.longitude
-        page.setData({ lt, lg })
-      }
-    })
+    wx.scanCode({
+      onlyFromCamera: true,
+      success(res) {
 
-    const options = {
-      success: function (res) {
-        const bikes = res.data.bikes
-        bikes.forEach(function(bike) {
-          bike.iconPath = "../images/bike_40px.png"
-          bike.width = 28
-          bike.height = 35
-        })
+        memory.bikeId = res.result
+        console.log(memory.bikeId)
+
         page.setData({
-          bikes
+          qrResult: memory.bikeId
+        })
+        wx.navigateTo({
+          url: '/pages/trip/trip',
         })
       },
-      fail: function (err) {
+      fail(err) {
         console.log(err)
       }
-    }
-
-    apiClient.getBikes(options)
+    })
   },
 
   /**
@@ -91,15 +82,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  goToScanner: function() {
-    wx.navigateTo({
-      url: '/pages/scanner/scanner',
-    })
-  },
-  goToProfile: function () {
-    wx.navigateTo({
-      url: '/pages/profile/profile',
-    })
   }
 })

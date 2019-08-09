@@ -1,28 +1,41 @@
 .container {
-  position: relative;
   width: 100vw;
   padding-top: 0rpx;
 }
 
 .button-profile {
-  position: absolute;
+  position: fixed;
+  z-index: 100000;
   top: 20rpx;
   left: 20rpx;
   opacity: 0.7;
 }
 
+#main-map {
+  z-index: -100000;
+}
+
 #startTripButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: rgba(20, 20, 20, 0.822);
-  color: white;
+
   height: 100rpx;
   width: 50%;
+
   border: 1px solid rgba(180, 180, 180, 0.88);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 30rpx;
+
   position: fixed;
-  bottom: 30rpx;
+  bottom: 20rpx;
+
+  color: white;
   font-weight: regular;
   font-size: 40rpx;
+
+  padding: 0px;
+  margin-left: 10px;
+  margin-top: 3%;
 }

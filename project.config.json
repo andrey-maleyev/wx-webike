@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
@@ -65,9 +65,9 @@
 					"scene": null
 				},
 				{
-					"id": 2,
-					"name": "pages/profile/profile",
-					"pathName": "pages/profile/profile",
+					"id": -1,
+					"name": "pages/scanner/scanner",
+					"pathName": "pages/scanner/scanner",
 					"query": "",
 					"scene": null
 				},
