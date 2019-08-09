@@ -1,22 +1,17 @@
 <!--pages/profile/profile.wxml-->
 <view class ="content">
   <image id = "avatar" src="{{avatarUrl}}"></image>
+  <view id="nickname"><text class = "name_1">{{nickName}}</text></view>
 
   <view class = "info_2">
-    <view class= "box">
-      <text class = "name_1">{{nickName}}</text>
-    </view>
     <view class = "all_text">
-      <text class = "money_1">Balance: {{money/100}}RMB</text>
-      <text class = "distance">Total 🚲 distance: 342km</text>
-      <text class = "save">You have saved: 0.5 polar bears</text>  
+      <text class = "money_1">Balance: {{money/100}} RMB</text>
+      <text class = "distance">Total 🚲 distance: 25 km</text>
+      <text class = "save">You have saved: 0.25 polar bears</text>  
     </view>
   </view>
 
-  <!-- <view class = "info"> -->
-    <!-- <text class = "distance">Total 🚲 distance: 342km</text> -->
-   <image class= "polar_bear" src="/images/polar-bear.png"></image>
-  <!-- </view> -->
+  <image class= "polar_bear" src="/images/polar-bear-thx.png"></image>
 
   <view class="weui-tabbar">
             <view class="weui-tabbar__item">
