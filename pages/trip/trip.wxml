@@ -9,15 +9,15 @@
 
     <view class="time">
 
-      <text>Start Time: {{timer_seconds}} secs</text>
+      <text>Start: 0 m {{timer_seconds}} s</text>
     </view>
 
     <view class="distance">
-      <text>Distance: 2.1 km </text>
+      <text>Distance: {{timer_seconds*4}} m</text>
     </view>
 
     <view class="cost">
-      <text>Cost: RMB 1.00 </text>
+      <text>Cost: 1 week free trial</text> 
     </view>
   
 </container>

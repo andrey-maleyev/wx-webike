@@ -27,7 +27,7 @@ Page({
     const timer = setInterval(function (e) {
       page.setData({ timer_seconds: page.data.timer_seconds + 1 })
       console.log(page.data.timer_seconds)
-      if (page.data.timer_seconds === 40) {
+      if (page.data.timer_seconds === 60) {
       console.log("hit")
       clearInterval(timer)
        }
