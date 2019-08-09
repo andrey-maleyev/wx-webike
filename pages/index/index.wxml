@@ -10,12 +10,13 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view bindtap="goToLogoNoWait" class="usermotto">
+    <text class="user-motto">webike</text>
   </view>
 </view>
 
-<view class="weui-tabbar">
+
+<!-- <view class="weui-tabbar">
           <view class="weui-tabbar__item weui-bar__item_on">
               <view style="position: relative;display:inline-block;">
                 <image src="../images/pic_160.png" class="weui-tabbar__icon"></image>
@@ -29,4 +30,4 @@
               </view>
               <view class="weui-tabbar__label">标题</view>
           </view>
-      </view>
+      </view> -->

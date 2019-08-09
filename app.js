@@ -2,6 +2,7 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
+    const baseUrl ="http://webikechengdu.herokuapp.com/api/v1/"
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
@@ -32,8 +33,32 @@ App({
         }
       }
     })
-  },
+    wx.login({
+    success: (res) => {
+      console.log(res)
+      console.log(baseUrl)
+      // console.log(res.code)
+      // const openid = res.code
+      // console.log(openid)
+    wx.request({
+      url: baseUrl + 'login',
+      method: 'post',
+      data: {
+        code: res.code
+      },
+      success: (res) => {
+        console.log(res)
+        this.globalData.userId = res.data.userId
+      }
+    })
+    }
+  })
+ },
   globalData: {
+    success: (res) => {
+      console.log(res)
+      this.globalData.userId = res.data.userId
+    },
     userInfo: null
   }
 })
