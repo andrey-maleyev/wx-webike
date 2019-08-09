@@ -8,7 +8,8 @@
   </view>
 
     <view class="time">
-      <text>Time: 45 mins </text>
+
+      <text>Start Time: {{timer_seconds}} secs</text>
     </view>
 
     <view class="distance">
