@@ -17,9 +17,7 @@ Page({
         url: '/pages/main/main',
       })
       console.log("----Countdown----");
-    }, 5000);
-    
-
+    }, 3000)
   },
 
   /**
@@ -75,7 +73,4 @@ Page({
       url: '/pages/main/main',
     })
   }
- 
-
-
 })
