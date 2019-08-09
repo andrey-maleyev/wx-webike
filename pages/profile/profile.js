@@ -12,9 +12,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.code)
     const app = getApp()
     // while(!userInfo) {
-     
+    // console.log(options.id)
+
     // let page = this 
     // page.setData (nickName)
    const page = this 
