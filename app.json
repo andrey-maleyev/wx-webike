@@ -5,7 +5,8 @@
     "pages/profile/profile",
     "pages/trip/trip",
     "pages/main/main",
-    "pages/scanner/scanner"
+    "pages/scanner/scanner",
+    "pages/logo/logo"
   ],
   "window": {
     "backgroundTextStyle": "light",

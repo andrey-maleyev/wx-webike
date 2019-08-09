@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-      sc: '14'
+      sc: '17'
   },
 
   /**
@@ -14,34 +14,75 @@ Page({
    */
   onLoad: function () {
     const page = this
+    let lt = 0
+    let lg = 0
 
     wx.getLocation({
       type: 'wgs84', // **1
       success: function (res) {
-        const lt = res.latitude
-        const lg = res.longitude
+        lt = res.latitude
+        lg = res.longitude
         page.setData({ lt, lg })
+
+        const options = {
+          success: function (res) {
+
+            const bikes = res.data.bikes
+            bikes.forEach(function (bike) {
+              bike.iconPath = "../../images/bike_40px.png"
+              bike.width = 28
+              bike.height = 35
+            })
+
+            bikes.push({
+              longitude: lg,
+              latitude: lt,
+              iconPath: "../../images/pin.png",
+              width: 19,
+              height: 50
+            })
+            console.log(bikes)
+            page.setData({
+              bikes
+            })
+          },
+          fail: function (err) {
+            console.log(err)
+          }
+        }
+
+        apiClient.getBikes(options)
       }
     })
 
-    const options = {
-      success: function (res) {
-        const bikes = res.data.bikes
-        bikes.forEach(function(bike) {
-          bike.iconPath = "../images/bike_40px.png"
-          bike.width = 28
-          bike.height = 35
-        })
-        page.setData({
-          bikes
-        })
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    }
+    // const options = {
+    //   success: function (res) {
 
-    apiClient.getBikes(options)
+    //     const bikes = res.data.bikes
+    //     bikes.forEach(function(bike) {
+    //       bike.iconPath = "../../images/bike_40px.png"
+    //       bike.width = 28
+    //       bike.height = 35
+    //     })
+        
+    //     bikes.push({
+    //       longitude: lg,
+    //       latitude: lt,
+    //       iconPath: "../../images/pin.png",
+    //       width: 19,
+    //       height: 50
+    //     })
+    //     console.log(bikes)
+    //     page.setData({
+    //       bikes
+    //     })
+    //   },
+    //   fail: function (err) {
+    //     console.log(err)
+    //   }
+    // }
+
+    // apiClient.getBikes(options)
   },
 
   /**
