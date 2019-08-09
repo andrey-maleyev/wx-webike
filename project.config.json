@@ -4,13 +4,21 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
@@ -58,8 +66,9 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/trip/trip",
-					"pathName": "pages/trip/trip",
+					"name": "pages/scanner/scanner",
+					"pathName": "pages/scanner/scanner",
+					"query": "",
 					"scene": null
 				}
 			]

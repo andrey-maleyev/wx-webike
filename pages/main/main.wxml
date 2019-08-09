@@ -1,9 +1,9 @@
 <view class="container">
-  <map longitude="{{lg}}" latitude="{{lt}}" scale="{{sc}}" style="width: 100%; height: 100vh;" markers="{{mk}}"></map>
+  <map id="main-map" longitude="{{lg}}" latitude="{{lt}}" scale="{{sc}}" style="width: 100%; height: 100vh;" markers="{{bikes}}"></map>
 
-  <view id="startTripButton" bindtap="goToTrip">
-    Unlock
-  </view>
-
-  <image bindtap="goToProfile" class="button-profile" style="width: 100rpx; height: 100rpx" src="../images/profile_80px.png"></image>
+  <cover-view id="startTripButton" bindtap="goToScanner">
+    <cover-view>Unlock</cover-view>
+  </cover-view>
+    
+  <cover-image bindtap="goToProfile" class="button-profile" style="width: 100rpx; height: 100rpx" src="../images/profile_80px.png"></cover-image>
 </view>
