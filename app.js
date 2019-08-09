@@ -2,7 +2,7 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    const baseUrl =       "http://localhost:3000/"
+    const baseUrl ="http://webikechengdu.herokuapp.com/api/v1/"
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
